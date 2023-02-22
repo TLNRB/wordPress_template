@@ -9,9 +9,17 @@ get_header();
     <?php
       while(have_posts()) :
         the_post();
-        the_title();
-        the_content();
+        /* the_title();
+        the_content(); */
+        get_template_part( 'template-parts/post/content', get_post_format() );
       endwhile;
+
+      //if comments are open then we show the comments template
+      if( comments_open() || get_comments_number());
+        comments_template();
+      endif;
+
     ?>
+
   </main>
 </div>
