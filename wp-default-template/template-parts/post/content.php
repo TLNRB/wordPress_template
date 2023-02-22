@@ -39,8 +39,8 @@
         'after' => '</div',
       ) );
     ?>
-    <?php endif; ?>
   </div>
+  <?php endif; ?>
   
   <footer class="entry-footer default-max-width"></footer>
   </article>
