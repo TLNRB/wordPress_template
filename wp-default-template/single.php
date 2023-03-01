@@ -15,7 +15,7 @@ get_header();
       endwhile;
 
       //if comments are open then we show the comments template
-      if( comments_open() || get_comments_number());
+      if( comments_open() || get_comments_number()) :
         comments_template();
       endif;
 
