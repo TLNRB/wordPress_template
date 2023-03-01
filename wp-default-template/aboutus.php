@@ -5,3 +5,5 @@
 ?>
 
 <div id="box1">Box1</div>
+
+<?php get_footer( ); ?>
