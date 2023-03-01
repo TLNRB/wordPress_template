@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Archive
+ * Template Name: Archive
  */
 
  get_header();
@@ -21,6 +21,17 @@
         the_post();
         get_template_part( 'template-parts/post/content' );
       endwhile;
+
+      the_posts_pagination( 
+        array( 
+          'prev_text' => esc_html__('Prev'),
+          'next_text' => esc_html__('Next')
+        )
+        );
+
+        else :
+          get_template_part('template-parts/post/content', 'none');
     ?>
+    <?php endif; ?>
   </main>
 </div>
